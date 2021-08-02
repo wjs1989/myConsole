@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wjs.discovery</groupId>
+        <artifactId>console-discovery</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <groupId>com.wjs.discovery</groupId>
+    <artifactId>console-discovery-nacos</artifactId>
+    <name>console-discovery-nacos ${project.version}</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>com.wjs.common</groupId>
+            <artifactId>console-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- console-config -->
+        <dependency>
+            <groupId>com.wjs.config</groupId>
+            <artifactId>console-config-all</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wjs.discovery</groupId>
+            <artifactId>console-discovery-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

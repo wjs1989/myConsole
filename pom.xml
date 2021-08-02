@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.wjs</groupId>
+    <artifactId>wjs-console</artifactId>
+    <name>wjs-console ${project.version}</name>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <description>my first main project</description>
+
+    <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
+        <java.version>1.8</java.version>
+        <netty4.version>4.1.30.Final</netty4.version>
+        <logstash-logback-encoder.version>6.5</logstash-logback-encoder.version>
+        <logback-classic.version>1.2.4</logback-classic.version>
+        <config.version>1.2.1</config.version>
+        <cglib.version>3.1</cglib.version>
+
+        <nacos.version>1.3.3</nacos.version>
+    </properties>
+
+    <modules>
+        <module>console-server</module>
+        <module>console-client</module>
+        <module>console-common</module>
+        <module>console-config</module>
+        <module>console-core</module>
+        <module>console-discovery</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback-encoder.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.typesafe</groupId>
+                <artifactId>config</artifactId>
+                <version>${config.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.springframework.boot</groupId>-->
+    <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--                <configuration>-->
+    <!--                    <excludes>-->
+    <!--                        <exclude>-->
+    <!--                            <groupId>org.projectlombok</groupId>-->
+    <!--                            <artifactId>lombok</artifactId>-->
+    <!--                        </exclude>-->
+    <!--                    </excludes>-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
+
+</project>

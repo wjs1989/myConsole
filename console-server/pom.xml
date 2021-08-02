@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wjs</groupId>
+        <artifactId>wjs-console</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <groupId>com.wjs.server</groupId>
+    <artifactId>console-server</artifactId>
+    <name>console-server ${project.version}</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.72</version>
+        </dependency>
+
+        <!-- console-common -->
+        <dependency>
+            <groupId>com.wjs.common</groupId>
+            <artifactId>console-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- console-core -->
+        <dependency>
+            <groupId>com.wjs.core</groupId>
+            <artifactId>console-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- console-config -->
+        <dependency>
+            <groupId>com.wjs.config</groupId>
+            <artifactId>console-config-all</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- console-discovery -->
+        <dependency>
+            <groupId>com.wjs.discovery</groupId>
+            <artifactId>console-discovery-all</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- logback  begin -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+        </dependency>
+        <!-- logback  end -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
